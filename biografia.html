@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">	<title>Biografía</title>
+	    <meta content="Silvia Alarcón | Artista Visual (04/04/1981 - 25/09/2017)" name="description">
+ <link  rel="icon"   href="favicon.png" type="image/png" />
+
+	<link rel="stylesheet" href="css/estilos.css">
+	<link rel="stylesheet" href="css/font-awesome.css">
+
+	<script src="js/jquery-3.2.1.js"></script>
+	<script src="js/main.js"></script>
+	        <style>
+            
+            #pre-load-web {width:100%;position:absolute;background:#fff;left:0px;top:0px;z-index:100000}
+            /*aqui centramos la imagen si coloco margin left -30 es por que la imagen mide 60 */
+            #pre-load-web #imagen-load{left:50%;margin-left:-30px;position:absolute}
+            
+        </style>        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+        <script>
+        $(document).ready(function(){
+        //eliminamos el scroll de la pagina
+        $("body").css({"overflow-y":"hidden"});
+        //guardamos en una variable el alto del que tiene tu browser que no es lo mismo que del DOM
+        var alto=$(window).height();
+        //agregamos en el body un div que sera que ocupe toda la pantalla y se muestra encima de todo
+        $("body").append("<div id='pre-load-web'><div id='imagen-load'><img src='SilviaAlarcon.gif' width='65' height='65'  /><br />Cargando...</div>");
+        //le damos el alto
+        $("#pre-load-web").css({height:alto+"px"});
+        //esta sera la capa que esta dento de la capa que muestra un gif
+        $("#imagen-load").css({"margin-top":(alto/2)-30+"px"});
+        }) 
+
+        $(window).load(function(){
+           $("#pre-load-web").fadeOut(1000,function()
+           { 
+               //eliminamos la capa de precarga
+               $(this).remove();
+               //permitimos scroll
+               $("body").css({"overflow-y":"auto"}); 
+
+           });        
+        }) 
+            
+        </script>
+</head>
+<body>
+	<header>
+		<span id="button-menu" class="fa fa-bars"> Artista Silvia Alarcón</span>
+
+		<nav class="navegacion">
+			<ul class="menu">
+				<li><a href="index.html"><span class="fa fa-home icon-menu"></span>Inicio</a></li>
+				<li class="item-submenu" menu="1">
+					<a href="#"><span class="fa fa-th icon-menu"></span>Galería</a>
+					<ul class="submenu">
+						<li class="title-menu"><span class="fa fa-th icon-menu"></span>Galería</li>
+						<li class="go-back">Atras</li>
+
+						<li><a href="galeria/abstracto.html">Abstraccíon</a></li>
+						<li><a href="galeria.html">Dibujos</a></li>
+						<li><a href="galeria.html">Dibujos en carbonilla</a></li>
+						<li><a href="galeria.html">Fotografías</a></li>
+						<li><a href="galeria.html">Arte x parte</a></li>
+						<li><a href="galeria.html">Murales</a></li>
+						<li><a href="galeria.html">Figuración</a></li>
+						<li><a href="galeria.php">Pinturas rápidas</a></li>
+					</ul>
+				</li>
+
+				<li class="item-submenu" menu="2">
+					<a href="#"><span class="fa fa-calendar-check-o icon-menu"></span>Eventos</a>
+					<ul class="submenu">
+						<li class="title-menu"><span class="fa fa-calendar-check-o icon-menu"></span>Eventos</li>
+						<li class="go-back">Atras</li>
+
+						<li><a href="naturaleza.html">Naturaleza (2017)</a></li>
+						<li><a href="las-formas-del-monte.html">Las formas del monte (2017)</a></li>
+						<li><a href="muta.html">Muta (2016)</a></li>
+						<li><a href="artexparte.html">Arte x parte (2013)</a></li>
+					</ul>
+				</li>
+				<li><a href="biografia.html"><span class="fa fa-id-card icon-menu"></span>Biografía</a></li>
+				<li><a href="videos.html"><span class="fa fa-youtube-play icon-menu"></span>Videos</a></li>
+				<li><a href="contacto.html"><span class="fa fa-envelope icon-menu"></span>Contacto</a></li>
+
+			</ul>
+		</nav>
+	</header>
+<style>
+p, h1 {
+  padding-left: 10px;
+  padding-right: 10px;
+
+}
+        body {
+            background: -webkit-linear-gradient(orange, yellow, white);
+	        background: -moz-linear-gradient(orange, yellow, white);
+	        background: -o-linear-gradient(orange, yellow, white);
+	        background-attachment: fixed;
+	        background-repeat: round;
+            font-family: 'Open Sans', 'Helvetica', sans-serif;
+
+        }
+h1,p {
+margin-bottom: 10px;
+margin-left: 10px;
+margin-right: 10px;
+margin-top: 10px;
+}
+p { text-align: left }
+.container-fluid {
+  /* Por defecto en modo fila, uno al lado del otro */
+  display: flex;
+  flex-flow: row;
+}
+
+.item {
+  flex: 1 1 auto;  
+}
+
+@media (max-width: 750px) {
+  .container-fluid {
+    /* si es muy angosta, uno debajo del otro */
+    flex-flow: column;
+  }
+}
+
+.rojo {
+  background-color: red;
+}
+.beige {
+  background-color: beige;
+}
+.azul {
+  background-color: ;
+}
+.amarillo {
+  background-color: white;
+  width: 69%;
+}
+.naranja {
+  background-color: orange;
+}
+@media screen and (max-width: 720px) {
+        .beige, .azul, .rojo, .naranja, .amarillo, .black, .blue { 
+                  width: 100%; 
+                   }
+                }
+a {
+    color: blue;
+}
+A:link { 
+text-decoration:none;
+}
+
+A:visited { 
+text-decoration:none;
+}
+
+A:hover{
+text-decoration:none;
+}
+</style>
+<div class="container-fluid">
+<div><center>
+  <div class="item amarillo">
+	<center><br><br><br><br>
+	<h1>Biografía de Silvia Alarcón</h1>
+	<img src="Sil_May2017.jpg" width="100%" height="">
+	</center>
+		<div class="item azul">
+<p>
+Silvia Alarcón Artista Visual egresada del Instituto Superior Antonio Ruiz Montoya. Nació en Quilmes, provincia de Buenos Aires, Argentina. Se crío en Gobernador Ingeniero Valentín Virasoro, Corrientes y vive actualmente en Posadas Misiones.
+</p><p>
+A realizado exposiciones grupales en Posadas y otras localidades de Misiones, clínicas de arte con Daniel Fischer; y en Buenos Aires a través de eventos artístico, en la Feria del Libro con la revista Arte Euroamericano 2012; evento Arte x Parte en Berazategui 2013 y residencia para artistas en Isidoro espacio de arte en Coronel Suarez 2016, con Diana Aisemberg. 
+</p><p>
+Realizó su exposición “Muta” en el Museo de Bellas Artes Juan Yaparí en el 2016. “Las Formas del Monte” en la Casa de Misiones en Buenos Aires en el mes de mayo 2017 junto a otros artistas y ahora “Amo el Otoño” junto a la escritora Clavelina Britez en el Multicultural de la Costanera este mes de junio 2017.
+</p><p>
+Se dedica a crear sus obras artísticas en su estudio, la docencia de forma particular y a explorar su faceta poética. 
+</p><p>
+Silvia Alarcón 
+</p></p>
+<a href="https://www.facebook.com/silvia.alarcon.54922" target="_blank">Facebook de Silvia Alarcón</a></p>
+	</div>
+</div>
+  </div>
+</div>
+<!---btn-back--->
+     <style type="text/css">
+		.btn-primary {
+		background-color: orange; padding: 10px 20px; border: 2px; border-radius: 15px; }
+		a {color: blue;}
+		A:link {text-decoration:none;}
+		A:visited {text-decoration:none;}
+		A:hover{text-decoration:none;}
+        </style>
+<br><br><center><a href="index.html" class="btn btn-primary">INICIO</a></center>
+<!---btn-back-end--->
+<div class="copyright text-center">
+		<center><br>
+                    Powered By <a href="https://maurieb83.github.io/mebya/"><i>MEBYA</i></a> 
+                </div>
+<br>
+</body>
+</html>
